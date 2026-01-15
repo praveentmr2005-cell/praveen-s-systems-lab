@@ -83,6 +83,10 @@
     @apply text-xs uppercase tracking-widest text-muted-foreground mb-8 font-medium;
   }
 
+  .section-subheading {
+    @apply text-xl font-semibold text-foreground mb-4;
+  }
+
   .project-card {
     @apply bg-card border border-border rounded-lg overflow-hidden hover:border-primary/30 transition-all duration-300;
   }
@@ -124,4 +128,8 @@
   .stagger-2 { animation-delay: 0.2s; }
   .stagger-3 { animation-delay: 0.3s; }
   .stagger-4 { animation-delay: 0.4s; }
+  .stagger-5 { animation-delay: 0.5s; }
+  .stagger-6 { animation-delay: 0.6s; }
+  .stagger-7 { animation-delay: 0.7s; }
+  .stagger-8 { animation-delay: 0.8s; }
 }

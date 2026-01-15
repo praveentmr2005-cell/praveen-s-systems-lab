@@ -1,80 +1,138 @@
 const Skills = () => {
   const skills = {
-    languages: ["Python", "JavaScript", "Java", "C++"],
-    frameworks: ["React", "Redux", "Node.js", "Express.js", "Flask"],
-    cloud: ["Azure Container Apps", "Azure Service Bus", "Cosmos DB", "Azure Functions", "Docker", "MongoDB", "MySQL", "SQLite"],
-    tools: ["Git", "Azure DevOps", "Postman"],
-    concepts: ["LLMs", "Retrieval-Augmented Generation (RAG)", "Microservices", "System Design", "Containerization", "CI/CD", "Distributed Processing"]
+    systems: [
+      "Backend system design",
+      "Distributed task orchestration",
+      "Throughput & latency optimization",
+      "Fault isolation & failure handling",
+      "Idempotency & exactly-once semantics"
+    ],
+    mlSystems: [
+      "LLM integration in production systems",
+      "Retrieval-Augmented Generation (RAG)",
+      "Embedding-based semantic validation",
+      "ML workload observability"
+    ],
+    implementation: [
+      "C++",
+      "Python",
+      "JavaScript",
+      "Java",
+      "React",
+      "Node.js",
+      "Flask"
+    ],
+    infrastructure: [
+      "Azure Functions",
+      "Azure Service Bus",
+      "Cosmos DB",
+      "Docker",
+      "MongoDB",
+      "MySQL",
+      "SQLite"
+    ],
+    tooling: [
+      "Git",
+      "Azure DevOps",
+      "Postman",
+      "CI/CD pipelines"
+    ]
   };
 
   const services = [
-    "Backend system design and implementation",
-    "Distributed system architecture",
-    "High-performance service optimization",
-    "GenAI / RAG application development",
-    "Cloud-native application development"
+    "Designing and implementing backend systems under real-world constraints",
+    "Architecting distributed pipelines with clear failure semantics",
+    "Optimizing performance-critical services (latency, throughput, memory)",
+    "Building production-grade GenAI / RAG applications",
+    "Designing cloud-native systems with operational visibility"
   ];
 
   return (
     <section id="skills" className="py-24 border-t border-border">
       <div className="container mx-auto px-6">
-        <p className="section-heading">Skills & Services</p>
-        
+        <p className="section-heading">Skills & Capabilities</p>
+
         <div className="grid lg:grid-cols-2 gap-16">
+          {/* Capabilities */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-sm font-medium text-foreground mb-3">Languages</h3>
+              <h3 className="text-sm font-medium text-foreground mb-3">
+                Systems & Backend Engineering
+              </h3>
               <div className="flex flex-wrap gap-2">
-                {skills.languages.map((skill) => (
-                  <span key={skill} className="tech-tag">{skill}</span>
+                {skills.systems.map((skill) => (
+                  <span key={skill} className="tech-tag">
+                    {skill}
+                  </span>
                 ))}
               </div>
             </div>
-            
+
             <div>
-              <h3 className="text-sm font-medium text-foreground mb-3">Frameworks & Libraries</h3>
+              <h3 className="text-sm font-medium text-foreground mb-3">
+                ML Systems & GenAI
+              </h3>
               <div className="flex flex-wrap gap-2">
-                {skills.frameworks.map((skill) => (
-                  <span key={skill} className="tech-tag">{skill}</span>
+                {skills.mlSystems.map((skill) => (
+                  <span key={skill} className="tech-tag">
+                    {skill}
+                  </span>
                 ))}
               </div>
             </div>
-            
+
             <div>
-              <h3 className="text-sm font-medium text-foreground mb-3">Cloud & Databases</h3>
+              <h3 className="text-sm font-medium text-foreground mb-3">
+                Implementation Stack
+              </h3>
               <div className="flex flex-wrap gap-2">
-                {skills.cloud.map((skill) => (
-                  <span key={skill} className="tech-tag">{skill}</span>
+                {skills.implementation.map((skill) => (
+                  <span key={skill} className="tech-tag">
+                    {skill}
+                  </span>
                 ))}
               </div>
             </div>
-            
+
             <div>
-              <h3 className="text-sm font-medium text-foreground mb-3">Developer Tools</h3>
+              <h3 className="text-sm font-medium text-foreground mb-3">
+                Infrastructure & Data
+              </h3>
               <div className="flex flex-wrap gap-2">
-                {skills.tools.map((skill) => (
-                  <span key={skill} className="tech-tag">{skill}</span>
+                {skills.infrastructure.map((skill) => (
+                  <span key={skill} className="tech-tag">
+                    {skill}
+                  </span>
                 ))}
               </div>
             </div>
-            
+
             <div>
-              <h3 className="text-sm font-medium text-foreground mb-3">Core Concepts</h3>
+              <h3 className="text-sm font-medium text-foreground mb-3">
+                Tooling & Delivery
+              </h3>
               <div className="flex flex-wrap gap-2">
-                {skills.concepts.map((skill) => (
-                  <span key={skill} className="tech-tag">{skill}</span>
+                {skills.tooling.map((skill) => (
+                  <span key={skill} className="tech-tag">
+                    {skill}
+                  </span>
                 ))}
               </div>
             </div>
           </div>
-          
+
+          {/* Services */}
           <div>
-            <h2 className="text-2xl font-semibold mb-8">Services Offered</h2>
+            <h2 className="text-2xl font-semibold mb-8">
+              What I Work On
+            </h2>
             <ul className="space-y-4">
               {services.map((service) => (
                 <li key={service} className="flex items-start gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0" />
-                  <span className="text-muted-foreground">{service}</span>
+                  <span className="text-muted-foreground">
+                    {service}
+                  </span>
                 </li>
               ))}
             </ul>
