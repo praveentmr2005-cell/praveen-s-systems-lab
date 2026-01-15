@@ -13,14 +13,14 @@ const Projects = () => {
               <div>
                 <span className="metric-badge mb-3 inline-block">Featured</span>
                 <h3 className="text-2xl md:text-3xl font-semibold mb-2">
-                  High-Performance Limit Order Book
+                  Real-Time Collaborative Code Platform
                 </h3>
                 <p className="text-muted-foreground">
-                  Low-latency matching engine in C++ with optimized memory layout
+                  Multi-user code editor with CRDT-based conflict-free synchronization
                 </p>
               </div>
               <a 
-                href="https://github.com" 
+                href="https://github.com/TMR2005" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors"
@@ -29,32 +29,25 @@ const Projects = () => {
               </a>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-8 mb-8">
-              <div>
-                <h4 className="text-sm font-medium text-foreground mb-3">Problem & Constraints</h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Build a matching engine capable of processing 100K+ orders/second with sub-microsecond latency. Memory efficiency critical for handling large order books without cache thrashing.
-                </p>
-              </div>
-              <div>
-                <h4 className="text-sm font-medium text-foreground mb-3">Key Decisions</h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Custom allocator for order objects, cache-aligned price level structures, and lock-free queue for order ingestion. Rejected red-black tree in favor of sorted vector for better cache locality at expected book depths.
-                </p>
-              </div>
-            </div>
-            
-            <div className="flex flex-wrap gap-3 mb-6">
-              <span className="metric-badge">~0.8μs avg latency</span>
-              <span className="metric-badge">150K orders/sec throughput</span>
-              <span className="metric-badge">2.3x memory reduction</span>
+            <div className="space-y-4 mb-8">
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li>• Built a real-time collaborative code editor supporting concurrent multi-user editing with CRDT-based conflict-free synchronization (Yjs).</li>
+                <li>• Implemented live cursor presence, selections, and awareness using WebSocket-based sync channels.</li>
+                <li>• Designed a Redis-backed hot-cache + job queue architecture to separate real-time collaboration from persistence and execution.</li>
+                <li>• Built an asynchronous remote code execution pipeline using Redis queues and isolated worker processes.</li>
+                <li>• Ensured fault-tolerant reconnection and state hydration on network drops via in-memory session recovery.</li>
+                <li>• Deployed a production-ready system with separate API, CRDT sync, and worker services.</li>
+              </ul>
             </div>
             
             <div className="flex flex-wrap gap-2">
-              <span className="tech-tag">C++</span>
-              <span className="tech-tag">Custom Allocators</span>
-              <span className="tech-tag">Lock-free</span>
-              <span className="tech-tag">Cache Optimization</span>
+              <span className="tech-tag">React</span>
+              <span className="tech-tag">Monaco Editor</span>
+              <span className="tech-tag">Yjs (CRDT)</span>
+              <span className="tech-tag">WebSockets</span>
+              <span className="tech-tag">Node.js</span>
+              <span className="tech-tag">Redis</span>
+              <span className="tech-tag">MongoDB</span>
             </div>
           </div>
         </div>
@@ -63,9 +56,12 @@ const Projects = () => {
         <div className="grid md:grid-cols-2 gap-6">
           <div className="project-card p-6">
             <div className="flex items-start justify-between mb-4">
-              <h3 className="text-lg font-semibold">Distributed Document Pipeline</h3>
+              <div>
+                <h3 className="text-lg font-semibold">MLinux – ML-Aware Linux Layer</h3>
+                <p className="text-xs text-muted-foreground font-mono mt-1">GPU Telemetry & Optimization</p>
+              </div>
               <a 
-                href="https://github.com" 
+                href="https://github.com/TMR2005" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors"
@@ -73,26 +69,89 @@ const Projects = () => {
                 <ArrowRight className="w-4 h-4" />
               </a>
             </div>
-            <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-              Cloud-native document processing system with parallel ingestion, transformation stages, and distributed state management. Handles 10K+ documents/hour with automatic retry and dead-letter queuing.
-            </p>
+            <ul className="text-sm text-muted-foreground mb-4 space-y-2">
+              <li>• Implemented a system-level telemetry daemon using NVIDIA NVML and systemd hooks to track GPU utilization, VRAM load, CPU metrics, and starvation patterns during model training.</li>
+              <li>• Developed a kernel- and batch-size advisor that surfaces bottlenecks by correlating runtime traces with throughput dips and memory pressure.</li>
+              <li>• Built a curses-based TUI dashboard, utilization history graphs, and JSON logs for profiling ML workloads.</li>
+            </ul>
+            <div className="flex flex-wrap gap-2">
+              <span className="tech-tag">Python</span>
+              <span className="tech-tag">Systemd</span>
+              <span className="tech-tag">NVIDIA NVML</span>
+              <span className="tech-tag">PyTorch CUDA</span>
+            </div>
+          </div>
+          
+          <div className="project-card p-6">
+            <div className="flex items-start justify-between mb-4">
+              <div>
+                <h3 className="text-lg font-semibold">LANCast</h3>
+                <p className="text-xs text-muted-foreground font-mono mt-1">Offline LAN Video/Audio Conferencing</p>
+              </div>
+              <a 
+                href="https://github.com/TMR2005" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <ArrowRight className="w-4 h-4" />
+              </a>
+            </div>
+            <ul className="text-sm text-muted-foreground mb-4 space-y-2">
+              <li>• Built a LAN-only real-time conferencing app with TCP chat/screen-share and UDP audio/video streaming.</li>
+              <li>• Implemented 20 FPS JPEG video streaming at 40% compression, balancing smooth playback with low bandwidth.</li>
+              <li>• Added screen-share with adaptive frame throttling for low-power devices.</li>
+              <li>• Designed a hostable server–client model with file transfer, peer discovery, and multi-user participation.</li>
+            </ul>
             <div className="flex flex-wrap gap-2 mb-4">
-              <span className="metric-badge">10K docs/hr</span>
-              <span className="metric-badge">99.9% uptime</span>
+              <span className="metric-badge">&lt;50ms LAN latency</span>
+              <span className="metric-badge">20 FPS streaming</span>
             </div>
             <div className="flex flex-wrap gap-2">
               <span className="tech-tag">Python</span>
-              <span className="tech-tag">Kafka</span>
-              <span className="tech-tag">Redis</span>
-              <span className="tech-tag">Docker</span>
+              <span className="tech-tag">Socket Programming</span>
+              <span className="tech-tag">TCP/UDP</span>
+              <span className="tech-tag">Media Streaming</span>
             </div>
           </div>
           
           <div className="project-card p-6">
             <div className="flex items-start justify-between mb-4">
-              <h3 className="text-lg font-semibold">RAG-based Knowledge System</h3>
+              <div>
+                <h3 className="text-lg font-semibold">AI-Augmented Compiler for MiniC</h3>
+                <p className="text-xs text-muted-foreground font-mono mt-1">MIPS Backend</p>
+              </div>
               <a 
-                href="https://github.com" 
+                href="https://github.com/TMR2005" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <ArrowRight className="w-4 h-4" />
+              </a>
+            </div>
+            <ul className="text-sm text-muted-foreground mb-4 space-y-2">
+              <li>• Engineered a full compiler pipeline (Flex/Bison → AST → TAC → optimizer → MIPS codegen) for a C subset.</li>
+              <li>• Implemented liveness-based register pressure analysis triggering an LLM-based IR rewriting pass when spills were predicted.</li>
+              <li>• Built a semantic-equivalence verification layer to prevent hallucinated optimizations in AI-assisted compilation.</li>
+            </ul>
+            <div className="flex flex-wrap gap-2">
+              <span className="tech-tag">C</span>
+              <span className="tech-tag">Flex/Bison</span>
+              <span className="tech-tag">TAC IR</span>
+              <span className="tech-tag">LLM Integration</span>
+              <span className="tech-tag">MIPS Assembly</span>
+            </div>
+          </div>
+          
+          <div className="project-card p-6">
+            <div className="flex items-start justify-between mb-4">
+              <div>
+                <h3 className="text-lg font-semibold">High-Performance Limit Order Book</h3>
+                <p className="text-xs text-muted-foreground font-mono mt-1">Matching Engine in C++</p>
+              </div>
+              <a 
+                href="https://github.com/TMR2005" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors"
@@ -101,67 +160,17 @@ const Projects = () => {
               </a>
             </div>
             <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-              Retrieval-augmented generation system integrating LLMs with structured knowledge bases. Hybrid search combining vector similarity with keyword matching for improved relevance.
+              Low-latency matching engine with custom allocator for order objects, cache-aligned price level structures, and lock-free queue for order ingestion. Optimized for memory locality and throughput.
             </p>
             <div className="flex flex-wrap gap-2 mb-4">
-              <span className="metric-badge">85% relevance score</span>
-              <span className="metric-badge">&lt;2s response</span>
+              <span className="metric-badge">Sub-μs latency</span>
+              <span className="metric-badge">150K orders/sec</span>
             </div>
             <div className="flex flex-wrap gap-2">
-              <span className="tech-tag">Python</span>
-              <span className="tech-tag">LangChain</span>
-              <span className="tech-tag">PostgreSQL</span>
-              <span className="tech-tag">OpenAI</span>
-            </div>
-          </div>
-          
-          <div className="project-card p-6">
-            <div className="flex items-start justify-between mb-4">
-              <h3 className="text-lg font-semibold">CRDT Collaborative Editor</h3>
-              <a 
-                href="https://github.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-                <ArrowRight className="w-4 h-4" />
-              </a>
-            </div>
-            <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-              Conflict-free replicated data type implementation for real-time collaborative text editing. Explored Yjs and Automerge internals, implementing custom CRDT for specific convergence guarantees.
-            </p>
-            <div className="flex flex-wrap gap-2 mb-4">
-              <span className="metric-badge">50+ concurrent users</span>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              <span className="tech-tag">TypeScript</span>
-              <span className="tech-tag">WebSocket</span>
-              <span className="tech-tag">CRDT</span>
-            </div>
-          </div>
-          
-          <div className="project-card p-6">
-            <div className="flex items-start justify-between mb-4">
-              <h3 className="text-lg font-semibold">API Gateway & Rate Limiter</h3>
-              <a 
-                href="https://github.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-                <ArrowRight className="w-4 h-4" />
-              </a>
-            </div>
-            <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-              Custom API gateway with distributed rate limiting using sliding window algorithm. Token bucket implementation with Redis for cross-instance coordination.
-            </p>
-            <div className="flex flex-wrap gap-2 mb-4">
-              <span className="metric-badge">100K req/min capacity</span>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              <span className="tech-tag">Go</span>
-              <span className="tech-tag">Redis</span>
-              <span className="tech-tag">gRPC</span>
+              <span className="tech-tag">C++</span>
+              <span className="tech-tag">Custom Allocators</span>
+              <span className="tech-tag">Lock-free</span>
+              <span className="tech-tag">Cache Optimization</span>
             </div>
           </div>
         </div>

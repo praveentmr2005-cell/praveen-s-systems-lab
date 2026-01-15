@@ -10,10 +10,10 @@ const About = () => {
               Systems-focused engineer with a bias for correctness and performance.
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Undergraduate Computer Science student at IIIT Kancheepuram pursuing a dual degree (graduating 2028). My work centers on backend engineering, systems design, and distributed architectures where measurable impact matters more than feature count.
+              Undergraduate Computer Science student at IIITDM Chennai pursuing B.Tech + M.Tech (graduating 2028). My work centers on backend engineering, distributed systems, and building AI-augmented applications with measurable outcomes.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              I approach problems through constraint-driven design, benchmark before optimizing, and document trade-offs explicitly. The goal is always clarity and correctness first, then performance.
+              Strengthened algorithmic foundations by solving 300+ problems across Codeforces (Specialist), LeetCode and other platforms.
             </p>
           </div>
           
@@ -21,29 +21,33 @@ const About = () => {
             <div>
               <h3 className="text-sm font-medium text-foreground mb-3">Education</h3>
               <div className="text-muted-foreground">
-                <p className="font-medium text-foreground">Dual Degree, Computer Science</p>
-                <p>IIIT Kancheepuram</p>
-                <p className="text-sm font-mono">2024 – 2028</p>
+                <p className="font-medium text-foreground">B.Tech + M.Tech, Computer Science and Engineering</p>
+                <p>Indian Institute of Information Technology, Design and Manufacturing</p>
+                <p className="text-sm font-mono mt-1">2023 – 2028 | Chennai, India</p>
+                <p className="text-sm font-mono text-accent">8.83/10 CGPA (Till 5th Semester)</p>
               </div>
             </div>
             
             <div>
-              <h3 className="text-sm font-medium text-foreground mb-3">Engineering Interests</h3>
-              <ul className="space-y-2 text-muted-foreground">
-                <li>• Systems performance and correctness</li>
-                <li>• Distributed coordination and scaling trade-offs</li>
-                <li>• Practical application of GenAI in backend systems</li>
-                <li>• Memory-efficient data structures</li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 className="text-sm font-medium text-foreground mb-3">Approach</h3>
+              <h3 className="text-sm font-medium text-foreground mb-3">Relevant Coursework</h3>
               <div className="flex flex-wrap gap-2">
-                <span className="tech-tag">Constraint-driven design</span>
-                <span className="tech-tag">Benchmark first</span>
-                <span className="tech-tag">Trade-off documentation</span>
+                <span className="tech-tag">Compiler Design</span>
+                <span className="tech-tag">Operating Systems</span>
+                <span className="tech-tag">Algorithms</span>
+                <span className="tech-tag">Data Structures</span>
+                <span className="tech-tag">Computer Architecture</span>
+                <span className="tech-tag">Database Systems</span>
+                <span className="tech-tag">Machine Learning</span>
+                <span className="tech-tag">Networks</span>
               </div>
+            </div>
+            
+            <div>
+              <h3 className="text-sm font-medium text-foreground mb-3">Achievements</h3>
+              <ul className="space-y-2 text-muted-foreground text-sm">
+                <li>• 300+ problems on Codeforces (Specialist), LeetCode</li>
+                <li>• Commendable rank in JEE Mains and Advanced</li>
+              </ul>
             </div>
           </div>
         </div>

@@ -1,28 +1,18 @@
 const Skills = () => {
-  const expertise = [
-    {
-      category: "Backend Engineering",
-      skills: ["API Design", "Service Architecture", "Database Optimization", "Caching Strategies"]
-    },
-    {
-      category: "Systems Design",
-      skills: ["Distributed Systems", "Consensus Protocols", "Load Balancing", "Fault Tolerance"]
-    },
-    {
-      category: "Performance",
-      skills: ["Profiling & Benchmarking", "Memory Optimization", "Latency Reduction", "Throughput Scaling"]
-    },
-    {
-      category: "Applied AI",
-      skills: ["RAG Systems", "LLM Integration", "Vector Databases", "Prompt Engineering"]
-    }
-  ];
+  const skills = {
+    languages: ["Python", "JavaScript", "Java", "C++"],
+    frameworks: ["React", "Redux", "Node.js", "Express.js", "Flask"],
+    cloud: ["Azure Container Apps", "Azure Service Bus", "Cosmos DB", "Azure Functions", "Docker", "MongoDB", "MySQL", "SQLite"],
+    tools: ["Git", "Azure DevOps", "Postman"],
+    concepts: ["LLMs", "Retrieval-Augmented Generation (RAG)", "Microservices", "System Design", "Containerization", "CI/CD", "Distributed Processing"]
+  };
 
   const services = [
     "Backend system design and implementation",
-    "Distributed system architecture consulting",
+    "Distributed system architecture",
     "High-performance service optimization",
-    "GenAI / RAG application development"
+    "GenAI / RAG application development",
+    "Cloud-native application development"
   ];
 
   return (
@@ -31,19 +21,50 @@ const Skills = () => {
         <p className="section-heading">Skills & Services</p>
         
         <div className="grid lg:grid-cols-2 gap-16">
-          <div>
-            <h2 className="text-2xl font-semibold mb-8">Core Expertise</h2>
-            <div className="space-y-8">
-              {expertise.map((item) => (
-                <div key={item.category}>
-                  <h3 className="text-sm font-medium text-foreground mb-3">{item.category}</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {item.skills.map((skill) => (
-                      <span key={skill} className="tech-tag">{skill}</span>
-                    ))}
-                  </div>
-                </div>
-              ))}
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-sm font-medium text-foreground mb-3">Languages</h3>
+              <div className="flex flex-wrap gap-2">
+                {skills.languages.map((skill) => (
+                  <span key={skill} className="tech-tag">{skill}</span>
+                ))}
+              </div>
+            </div>
+            
+            <div>
+              <h3 className="text-sm font-medium text-foreground mb-3">Frameworks & Libraries</h3>
+              <div className="flex flex-wrap gap-2">
+                {skills.frameworks.map((skill) => (
+                  <span key={skill} className="tech-tag">{skill}</span>
+                ))}
+              </div>
+            </div>
+            
+            <div>
+              <h3 className="text-sm font-medium text-foreground mb-3">Cloud & Databases</h3>
+              <div className="flex flex-wrap gap-2">
+                {skills.cloud.map((skill) => (
+                  <span key={skill} className="tech-tag">{skill}</span>
+                ))}
+              </div>
+            </div>
+            
+            <div>
+              <h3 className="text-sm font-medium text-foreground mb-3">Developer Tools</h3>
+              <div className="flex flex-wrap gap-2">
+                {skills.tools.map((skill) => (
+                  <span key={skill} className="tech-tag">{skill}</span>
+                ))}
+              </div>
+            </div>
+            
+            <div>
+              <h3 className="text-sm font-medium text-foreground mb-3">Core Concepts</h3>
+              <div className="flex flex-wrap gap-2">
+                {skills.concepts.map((skill) => (
+                  <span key={skill} className="tech-tag">{skill}</span>
+                ))}
+              </div>
             </div>
           </div>
           
@@ -57,22 +78,6 @@ const Skills = () => {
                 </li>
               ))}
             </ul>
-            
-            <div className="mt-12 p-6 bg-card border border-border rounded-lg">
-              <h3 className="text-sm font-medium text-foreground mb-3">Languages & Tools</h3>
-              <div className="flex flex-wrap gap-2">
-                <span className="tech-tag">C++</span>
-                <span className="tech-tag">Python</span>
-                <span className="tech-tag">Go</span>
-                <span className="tech-tag">TypeScript</span>
-                <span className="tech-tag">PostgreSQL</span>
-                <span className="tech-tag">Redis</span>
-                <span className="tech-tag">Kafka</span>
-                <span className="tech-tag">Docker</span>
-                <span className="tech-tag">Kubernetes</span>
-                <span className="tech-tag">AWS</span>
-              </div>
-            </div>
           </div>
         </div>
       </div>

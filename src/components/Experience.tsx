@@ -27,26 +27,28 @@ const Experience = () => {
               </div>
               
               <div className="mt-4 space-y-4 text-muted-foreground">
-                <p className="leading-relaxed">
-                  Designed and implemented backend architecture for AI-powered product features. Focus on service boundaries, data flow optimization, and production deployment considerations.
-                </p>
+                <ul className="space-y-3 text-sm">
+                  <li>• Designed and implemented a scalable document processing system using Python, Azure Functions, Service Bus, Cosmos DB, and Docker.</li>
+                  <li>• Reduced end-to-end document handling latency by ~90% through microservice decomposition and parallel task execution.</li>
+                  <li>• Developed a FIFO batching mechanism that increased throughput from ~1 to 12–16 documents/minute under load.</li>
+                  <li>• Integrated GPT-4 and Azure Document Intelligence to extract CTQ fields from complex PDFs with 99%+ accuracy.</li>
+                  <li>• Built a semantic validation layer using OpenAI embeddings to resolve inconsistent or ambiguous fields.</li>
+                  <li>• Ensured exactly-once message processing via idempotent writes, state tracking, and consistency controls in Cosmos DB.</li>
+                </ul>
                 
-                <div>
-                  <h4 className="text-sm font-medium text-foreground mb-2">Key Contributions</h4>
-                  <ul className="space-y-2 text-sm">
-                    <li>• Architected distributed service layer handling 50K+ daily API calls with &lt;100ms p99 latency</li>
-                    <li>• Implemented async processing pipeline reducing user-facing response times by 40%</li>
-                    <li>• Designed caching strategy with Redis, achieving 85% cache hit rate for hot paths</li>
-                    <li>• Established monitoring and alerting infrastructure for production observability</li>
-                  </ul>
+                <div className="flex flex-wrap gap-2 pt-2">
+                  <span className="metric-badge">~90% latency reduction</span>
+                  <span className="metric-badge">12-16 docs/min throughput</span>
+                  <span className="metric-badge">99%+ extraction accuracy</span>
                 </div>
                 
                 <div className="flex flex-wrap gap-2 pt-2">
                   <span className="tech-tag">Python</span>
-                  <span className="tech-tag">FastAPI</span>
-                  <span className="tech-tag">Redis</span>
-                  <span className="tech-tag">PostgreSQL</span>
+                  <span className="tech-tag">Azure Functions</span>
+                  <span className="tech-tag">Service Bus</span>
+                  <span className="tech-tag">Cosmos DB</span>
                   <span className="tech-tag">Docker</span>
+                  <span className="tech-tag">GPT-4</span>
                 </div>
               </div>
             </div>

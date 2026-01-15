@@ -19,7 +19,7 @@ const Navigation = () => {
           
           <div className="flex items-center gap-4">
             <a 
-              href="https://github.com" 
+              href="https://github.com/TMR2005" 
               target="_blank" 
               rel="noopener noreferrer"
               className="nav-link-external"
@@ -27,7 +27,7 @@ const Navigation = () => {
               GitHub <ArrowUpRight className="w-3 h-3" />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://www.linkedin.com/in/praveen-tmr/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="nav-link-external"
